@@ -9,6 +9,7 @@ import file_hash
 import ip_lookup
 import banner_generator
 import file_organizer
+from system_info import start_system_info
 
 print("=" * 42)
 print("🚀 303 TOOLKIT v1.4 🚀")
@@ -33,7 +34,8 @@ while True:
     print("9 - IP Lookup")
     print("10 - ASCII Banner")
     print("11 - File Organizer")
-    print("12 - Exit")
+    print("12 - System Info")
+    print("13 - Exit")
 
     secim = input("\nSeçimin: ")
 
@@ -76,6 +78,9 @@ while True:
         file_organizer.start_organizer()
 
     elif secim == "12":
+        start_system_info()    
+
+    elif secim == "13":
         print("Görüşürüz 😎")
         break
 
