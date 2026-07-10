@@ -1,14 +1,14 @@
 # ==========================================
 # 303 TOOLKIT
 # Module : System Info
-# Version: v1.5
+# Version: v1.5.3
 # Author : Entity303
 # ==========================================
 
-import os
 import platform
-import shutil
 import sys
+import psutil
+import time
 
 
 def computer_info():
@@ -26,6 +26,88 @@ def computer_info():
     input("\nDevam etmek için Enter'a bas...")
 
 
+def ram_info():
+
+    ram = psutil.virtual_memory()
+
+    total = ram.total / (1024 ** 3)
+    used = ram.used / (1024 ** 3)
+    free = ram.available / (1024 ** 3)
+
+    print("=" * 35)
+    print("         RAM BİLGİSİ")
+    print("=" * 35)
+
+    print(f"\n🧠 Toplam RAM : {total:.2f} GB")
+    print(f"📈 Kullanılan : {used:.2f} GB")
+    print(f"📉 Boş RAM    : {free:.2f} GB")
+    print(f"📊 Kullanım   : %{ram.percent}")
+
+    input("\nDevam etmek için Enter'a bas...")
+
+
+def disk_info():
+
+    disk = psutil.disk_usage("/")
+
+    total = disk.total / (1024 ** 3)
+    used = disk.used / (1024 ** 3)
+    free = disk.free / (1024 ** 3)
+
+    print("=" * 35)
+    print("        DİSK BİLGİSİ")
+    print("=" * 35)
+
+    print(f"\n💾 Toplam Disk : {total:.2f} GB")
+    print(f"📦 Kullanılan  : {used:.2f} GB")
+    print(f"🆓 Boş Alan    : {free:.2f} GB")
+    print(f"📊 Kullanım    : %{disk.percent}")
+
+    input("\nDevam etmek için Enter'a bas...")
+
+
+def python_info():
+
+    print("=" * 35)
+    print("        PYTHON")
+    print("=" * 35)
+
+    print(f"\n🐍 Python Sürümü : {platform.python_version()}")
+
+    print("\n📂 Python Konumu:")
+    print(sys.executable)
+
+    input("\nDevam etmek için Enter'a bas...")
+
+
+def uptime_info():
+
+    boot = psutil.boot_time()
+    now = time.time()
+
+    uptime = int(now - boot)
+
+    days = uptime // 86400
+    uptime %= 86400
+
+    hours = uptime // 3600
+    uptime %= 3600
+
+    minutes = uptime // 60
+    seconds = uptime % 60
+
+    print("=" * 35)
+    print("       SİSTEM DURUMU")
+    print("=" * 35)
+
+    print("\n🟢 Durum      : Aktif")
+    print(
+        f"🕒 Açık Kalma : {days} Gün {hours} Saat {minutes} Dakika {seconds} Saniye"
+    )
+
+    input("\nDevam etmek için Enter'a bas...")
+
+
 def start_system_info():
 
     while True:
@@ -37,7 +119,8 @@ def start_system_info():
         print("2 - RAM Bilgisi")
         print("3 - Disk Bilgisi")
         print("4 - Python Sürümü")
-        print("5 - Geri")
+        print("5 - Sistem Açık Kalma Süresi")
+        print("6 - Geri")
 
         secim = input("\nSeçimin: ")
 
@@ -45,26 +128,18 @@ def start_system_info():
             computer_info()
 
         elif secim == "2":
-            print("\n🚧 Yakında eklenecek...")
-            input("\nDevam etmek için Enter'a bas...")
+            ram_info()
 
         elif secim == "3":
-            print("\n🚧 Yakında eklenecek...")
-            input("\nDevam etmek için Enter'a bas...")
+            disk_info()
 
         elif secim == "4":
-
-            print("\n" + "=" * 35)
-            print("        PYTHON")
-            print("=" * 35)
-
-            print(f"\n🐍 Python Sürümü : {platform.python_version()}")
-            print(f"📂 Çalıştırılabilir Dosya :")
-            print(sys.executable)
-
-            input("\nDevam etmek için Enter'a bas...")
+            python_info()
 
         elif secim == "5":
+            uptime_info()
+
+        elif secim == "6":
             break
 
         else:
