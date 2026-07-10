@@ -1,3 +1,5 @@
+import time
+
 import matrix
 import password
 import calculator
@@ -9,17 +11,21 @@ import file_hash
 import ip_lookup
 import banner_generator
 import file_organizer
-from system_info import start_system_info
+import system_info
+import network_tools
+
 
 print("=" * 42)
-print("🚀 303 TOOLKIT v1.4 🚀")
+print("🚀 303 TOOLKIT v1.6 🚀")
 print("Developed by Entity303")
 print("=" * 42)
-print()
-print("Loading...")
-print()
+
+print("\nLoading...\n")
+time.sleep(1)
+
 
 while True:
+
     print("=" * 35)
     print("        303 TOOLKIT")
     print("=" * 35)
@@ -35,7 +41,8 @@ while True:
     print("10 - ASCII Banner")
     print("11 - File Organizer")
     print("12 - System Info")
-    print("13 - Exit")
+    print("13 - Network Tools")
+    print("14 - Exit")
 
     secim = input("\nSeçimin: ")
 
@@ -78,9 +85,12 @@ while True:
         file_organizer.start_organizer()
 
     elif secim == "12":
-        start_system_info()    
+        system_info.start_system_info()
 
     elif secim == "13":
+        network_tools.start_network()
+
+    elif secim == "14":
         print("Görüşürüz 😎")
         break
 

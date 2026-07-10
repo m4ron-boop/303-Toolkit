@@ -1,7 +1,7 @@
 import requests
 
 
-def start_ip_lookup():
+def start_lookup():
     print("=" * 35)
     print("        IP LOOKUP")
     print("=" * 35)
@@ -29,3 +29,5 @@ def start_ip_lookup():
 
     except Exception:
         print("❌ İnternet bağlantısı veya API hatası!")
+
+input("\nDevam etmek için Enter'a bas...")       
