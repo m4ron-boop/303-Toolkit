@@ -1,24 +1,47 @@
-# 303 Toolkit 🚀
+# 🚀 303 Toolkit
 
-**Developer:** Entity303
+> My first modular Python toolkit project.
 
-## Amaç
+## 📖 About
 
-303 Toolkit; Python öğrenmek, Git kullanmayı geliştirmek, Linux terminal mantığını kavramak ve siber güvenlik araçları geliştirmek amacıyla hazırlanan kişisel bir terminal uygulamasıdır.
+303 Toolkit is my first major Python project.
 
-## Planlanan Özellikler
+I developed this toolkit while learning Python, Git, Linux terminal usage, and the fundamentals of cybersecurity. The goal of the project is not to be a professional security framework, but to document my learning journey and practice building modular command-line applications.
 
-- 🟢 Matrix Effect
+## ✨ Features
+
+- 🎲 Matrix Effect
 - 🔐 Password Generator
 - 🧮 Calculator
-- 🌦️ Weather
+- 🔑 Hash Generator
+- 📄 File Hash
+- 🔒 Encrypt Tool
+- 🔄 Base64 Encoder / Decoder
 - 🌍 IP Lookup
-- 📡 Port Scanner
-- 📶 Ping Test
+- 📡 Network Scanner
+- 🛰️ Nmap Tools
 - 📱 QR Code Generator
-- 📂 File Explorer
+- 📂 File Organizer
 - 💻 System Information
 
-## Durum
+## 🛠 Built With
 
-🚧 Geliştiriliyor...
+- Python 3
+- Git
+- GitHub
+
+## ▶️ Run
+
+```bash
+python main.py
+```
+
+## 📌 Project Status
+
+✅ Version 1.0 Completed
+
+This repository represents the first completed version of 303 Toolkit. Future improvements and larger features are planned for **303 Toolkit v2**.
+
+## 👨‍💻 Developer
+
+**Entity303**
