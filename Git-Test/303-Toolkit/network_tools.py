@@ -9,6 +9,7 @@ import requests
 import socket
 import subprocess
 import ip_lookup
+import nmap_tools
 
 
 def public_ip():
@@ -143,7 +144,8 @@ def start_network():
         print("4 - 🌍 DNS Lookup")
         print("5 - 📡 Ping")
         print("6 - 🚪 Port Check")
-        print("7 - 🔙 Geri")
+        print("7 - 🕵️ Nmap Tools")
+        print("8 - 🔙 Geri")
 
         secim = input("\nSeçimin: ")
 
@@ -166,6 +168,9 @@ def start_network():
             port_check()
 
         elif secim == "7":
+            nmap_tools.nmap_menu()
+
+        elif secim == "8":
             break
 
         else:
