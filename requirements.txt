@@ -1,0 +1,17 @@
+certifi==2026.6.17
+cffi==2.1.0
+charset-normalizer==3.4.9
+colorama==0.4.6
+cryptography==49.0.0
+idna==3.18
+markdown-it-py==4.2.0
+mdurl==0.1.2
+psutil==7.2.2
+pycparser==3.0
+pyfiglet==1.0.4
+Pygments==2.20.0
+pyperclip==1.11.0
+qrcode==8.2
+requests==2.34.2
+rich==15.0.0
+urllib3==2.7.0
